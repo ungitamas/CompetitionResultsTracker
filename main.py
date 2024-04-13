@@ -4,7 +4,6 @@ def name_of_competition_in():
     name_of_competition = input("Kérem adja meg a verseny nevét: ")
     return name_of_competition
 
-
 def select_sport_type():
     sport_types = ["Röplabda", "Labdarúgás", "Kézilabda", "Kosárlabda"]
     while True:
@@ -17,7 +16,6 @@ def select_sport_type():
                 print(sp)
     return sport_type
 
-
 def select_type_of_competition():
     type_of_competition = int(input(
         "Kérem adja meg a verseny típusát: \n\t 1-Egyenes kiesés\n\t 2-Csoportkörös\n\t 3-Csoportkör, majd egyenes kiesés\n"))
@@ -25,7 +23,6 @@ def select_type_of_competition():
 
 # number_of_sets_to_win = int(input(
 #     "Kérem adja meg, hány győztes szettet kell elérni a mérkőzés megnyeréséhez (1,2 vagy 3): "))
-
 
 def enter_teamnames():
     team_names = []
@@ -38,7 +35,6 @@ def enter_teamnames():
             break
     return team_names
 
-
 # Sorsolás típus választása
 def select_draw_type():
     type_of_draw = int(input(
@@ -46,7 +42,6 @@ def select_draw_type():
     return type_of_draw
 
 # Kézi sorsolás eljárás
-
 
 def hand_drawn(team_names_for_drawing):
     i = 0
@@ -87,7 +82,6 @@ def random_draw(team_names_for_drawing):
     return matches
 
 # Mérkőzések kiíratása
-
 
 def print_matches(matches):
     for i in range(len(matches)):
@@ -132,9 +126,7 @@ def elimination_stage(team_names, type_of_draw):
     elimination_result.append(power_house_name)
     return elimination_result
 
-
 # Eredmény helyességének ellenőrzése
-
 
 def result_checker(result):
     while True:
@@ -148,7 +140,6 @@ def result_checker(result):
             print("Hibás mérkőzés eredmény! Kérem adjon meg új eredményeket!")
             return False
     return True
-
 
 # Eredmény bekérése
 def enter_result():
@@ -178,7 +169,6 @@ def enter_result():
 
     return result
 
-
 # Eredmények felvétele
 def input_results(matches):
     competition_dictionaries = []
@@ -194,7 +184,6 @@ def input_results(matches):
 
 # Továbbjutó csapatok
 
-
 def advancing_teams(competition_dictionaries):
     advancing_teams = []
     for i in range(len(competition_dictionaries)):
@@ -208,7 +197,6 @@ def advancing_teams(competition_dictionaries):
 
 # Kieső csapatok
 
-
 def eliminating_teams(competition_dictionaries):
     eliminating_teams = []
     for i in range(len(competition_dictionaries)):
@@ -219,7 +207,6 @@ def eliminating_teams(competition_dictionaries):
             eliminating_teams.append(
                 competition_dictionaries[i]["name_home_team"])
     return eliminating_teams
-
 
 
 def main():
