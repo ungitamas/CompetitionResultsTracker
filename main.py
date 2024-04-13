@@ -27,17 +27,17 @@ def select_type_of_competition():
 #     "Kérem adja meg, hány győztes szettet kell elérni a mérkőzés megnyeréséhez (1,2 vagy 3): "))
 
 
-# def enter_teamnames():
-#     team_names = []
-#     print("Kérem adja meg a csapat neveket (üres sor befejezi):")
-#     while True:
-#         team_name = input("Csapat név: ")
-#         if team_name:
-#             team_names.append(team_name)
-#         else:
-#             break
-# team_names = enter_teamnames()
-team_names = ["Alma", "Banán", "Citrom", "Eper", "Narancs", "Kiwi", "Körte"]
+def enter_teamnames():
+    team_names = []
+    print("Kérem adja meg a csapat neveket (üres sor befejezi):")
+    while True:
+        team_name = input("Csapat név: ")
+        if team_name:
+            team_names.append(team_name)
+        else:
+            break
+    return team_names
+
 
 # Sorsolás típus választása
 def select_draw_type():
@@ -230,6 +230,7 @@ def main():
     with open("final_results.txt", "a", encoding="utf-8") as output:
         print(sport_type, file=output)
     # team_names = enter_teamnames()
+    team_names = ["Alma", "Banán", "Citrom", "Eper", "Narancs", "Kiwi", "Körte"]
     print(sport_type)
     type_of_competition = select_type_of_competition()
     print(type_of_competition)
